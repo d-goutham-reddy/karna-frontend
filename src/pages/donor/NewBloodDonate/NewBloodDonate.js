@@ -115,7 +115,7 @@ const NewBloodDonate = () => {
                         <Form.Control type="date" placeholder="Date of birth" name='DOB' />
                     </Form.Group>
                     <Form.Group className="mb-3 my-4 addShow" controlId="DOB" onChange={(e)=> setTimeee(e.target.value)}  >
-                        <Form.Label>Date Time</Form.Label>
+                        <Form.Label>Time</Form.Label>
                         <Form.Control type="time" placeholder="Date of birth" name='DOB' />
                     </Form.Group>
                 </div>
