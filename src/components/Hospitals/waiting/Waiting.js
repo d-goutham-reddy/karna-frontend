@@ -39,7 +39,7 @@ const Waiting = (props) => {
         await axios
           .put(`${baseURL}/hospital/requests/waiting/cancel/${props.id}`,
             {
-              "permanentbanreason": cancelReason,
+              "cancelReason": cancelReason,
             })
           .then((response) => {
             console.log(response.status)

@@ -135,13 +135,12 @@ const EligibleStock = () => {
         separationType: separationType,
       };
     });
-  }, [bloodGroup, haemoglobin, rbcCount, report]);
+  }, [bloodGroup, haemoglobin, rbcCount, report, separationType]);
 
   const handleWholeRequests = () => {
     setFormValues((prev) => {
       return {
         ...prev,
-        separationType: "whole",
       };
     });
     async function callApi() {
@@ -151,7 +150,11 @@ const EligibleStock = () => {
             `${baseURL}/bloodbank/stock/new/create/${localStorage.getItem(
               "stock_details_id"
             )}`,
-            formValues
+            {
+              ...formValues,
+              separationType: "whole"
+            
+            }
           )
           .then((response) => {
             console.log(response.status);
@@ -196,7 +199,10 @@ const EligibleStock = () => {
             `${baseURL}/bloodbank/stock/new/create/${localStorage.getItem(
               "stock_details_id"
             )}`,
-            componentsForms
+            {
+              ...componentsForms,
+              separationType: "components"
+            }
           )
           .then((response) => {
             console.log(response.status);
@@ -251,7 +257,7 @@ const EligibleStock = () => {
 
   console.log(formValues);
 
-  const CallInserts = (insertID) => {
+  const CallInserts = (insertID, typer) => {
     async function callApi() {
       try {
         await axios
@@ -262,6 +268,15 @@ const EligibleStock = () => {
               toast.success(`Succesfully verfied `, {
                 toastId: "blood bank register",
               });
+              if(typer === 'rbc'){
+                setComponentRbcOkOverlay(true);
+              }
+              else if(typer === 'platelets'){
+                setComponentPlateletsOkOverlay(true);
+              }
+              else if(typer === 'plasma'){
+                setComponentPlasmaOkOverlay(true);
+              }
               // setComponentRbcOverlay(false);
             } else {
               toast.error(`unable to verify`, {
@@ -402,7 +417,7 @@ const EligibleStock = () => {
                       }
                     </p>
                     <p>
-                      Haemoglobin Levele:{" "}
+                      Haemoglobin Level:{" "}
                       {
                         BloodComponentResponse[0].bloodDonationDetails
                           .haemoglobinLevel
@@ -420,8 +435,8 @@ const EligibleStock = () => {
                     <button
                       className="btn btn-success rounded my-3 px-5 py-2"
                       onClick={() => {
-                        CallInserts(BloodComponentResponse[0]._id);
-                        setComponentRbcOkOverlay(true);
+                        CallInserts(BloodComponentResponse[0]._id, 'rbc');
+                        // setComponentRbcOkOverlay(true);
                       }}
                     >
                       Insert
@@ -510,8 +525,8 @@ const EligibleStock = () => {
                     <button
                       className="btn btn-success rounded my-3 px-5 py-2"
                       onClick={() => {
-                        CallInserts(BloodComponentResponse[1]._id);
-                        setComponentPlateletsOkOverlay(true);
+                        CallInserts(BloodComponentResponse[1]._id, 'platelets');
+                        
                       }}
                     >
                       Insert
@@ -600,8 +615,8 @@ const EligibleStock = () => {
                     <button
                       className="btn btn-success rounded my-3 px-5 py-2"
                       onClick={() => {
-                        CallInserts(BloodComponentResponse[2]._id);
-                        setComponentPlasmaOkOverlay(true);
+                        CallInserts(BloodComponentResponse[2]._id, 'plasma');
+                        
                       }}
                     >
                       Insert

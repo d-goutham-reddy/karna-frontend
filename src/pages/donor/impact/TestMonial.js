@@ -4,9 +4,9 @@ import React, { Fragment } from "react";
 const TestMonial = (props) => {
   return (
     <Fragment>
-      <div className="col-12 col-md-4 h-100" style={{ position: "relative" }}>
+      <div className="col-12 col-md-4 w-100 h-100" style={{ position: "relative" }}>
         <div
-          className="w-100 d-flex mt-3 h-100 justify-content-center"
+          className="w-100 d-flex mt-3 h-100 justify-content-center align-items-center"
           style={{
             zIndex: "2",
             border: "1px solid #FE472D",

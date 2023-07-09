@@ -18,6 +18,7 @@ const baseURL = envs.endpoint;
 const  HoscreateOrganRequest = ()=> {
 
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     "name": "Suja",
     "phone": 8998989877,
@@ -95,7 +96,7 @@ const  HoscreateOrganRequest = ()=> {
                               toastId: 'organ request success'
                           })
                         //   window.reload()
-                          // setTimeout(navigate('/donor/login'), 8000);
+                          setTimeout(navigate('/hospital/request'), 8000);
                       }
                       else {
                           toast.error("Something went wrong :(", {
@@ -126,7 +127,6 @@ const  HoscreateOrganRequest = ()=> {
         color:'#fe452d92',
         fontWeight:'1000',
         fontSize:'35px'
-
     }}
     >Create Organ Request</h3>  
    

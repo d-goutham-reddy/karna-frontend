@@ -7,6 +7,7 @@ import ok from "../../../assests/correct.png"
 import { envs } from '../../../utils/endpoint';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import wrong from "../../../assests/wrong.png";
 
 
 /**
@@ -36,6 +37,7 @@ const Confirmed = (props) => {
     const [readData, setReadData] = useState(false);
     const [idSubmit, setIdSubmit] = useState();
     const [msgFromPatient, setMsgFromPatient] = useState('');
+    const [www, setWww] = useState(false);
 
     const handleArrived = () => {
         setDisCard(true)
@@ -43,7 +45,7 @@ const Confirmed = (props) => {
 
     const handleReadData = () => {
 
-        setReadData(true)
+        
         async function callApi() {
             try {
                 await axios
@@ -55,16 +57,24 @@ const Confirmed = (props) => {
                                 toastId: 'blood bank register'
                             })
                             setIdSubmit(response.data._id)
+                            setReadData(true)
                         }
                         else {
                             toast.error(`unable to process`, {
                                 toastId: 'blood bank register'
                             })
-                            throw Error;
+                            if(response.status !== 201){
+                                setWww(true);
+                                setDisCard(false);
+                            }
+                   
+                            // throw Error;
                         }
                     })
             }
             catch (e) {
+                setWww(true);
+                setDisCard(false);
                 console.log(e);
             }
         }
@@ -86,7 +96,7 @@ const Confirmed = (props) => {
                             })
                             setTimeout(() => {
                                 window.location.reload(false);
-                            }, 6000);
+                            }, 2000);
                         }
                         else {
                             toast.error(`unable to verify`, {
@@ -131,6 +141,25 @@ const Confirmed = (props) => {
                                         onClick={handleReadData}
                                     >READ DATA</button>
                                 </div>
+                                
+                                    // readData === true ?  <div className='d-flex flex-column justify-content-center align-items-center'>
+                                    //     <h6 className='my-3 text-bold'>Blood Packet Arrived Successfully</h6>
+                                    //     <img src={ok} height={50} width={50} alt='ok img' className='my-5' />
+                                    //     <label id='msgPatient'>Message from Patient</label>
+                                    //     <input type='text' id='msgPatient' className='w-75 my-3 rounded' onChange={(e) => setMsgFromPatient(e.target.value)} />
+                                    //     <button
+                                    //         className='btn btn-success'
+                                    //         onClick={handleSubmit}
+                                    //     >SUBMIT</button>
+                                    // </div>:<div className='msg-box'>
+                                    //     <p></p>
+                                    //     <img src={wrong} height={50} width={50} alt='ok img' />
+                                    //     <p></p>
+                                    //     <button
+                                    //         className='btn btn-primary'
+                                    //         onClick={handleReadData}
+                                    //     >READ DATA</button>
+                                    // </div>
                             }
 
                         </div>
@@ -139,10 +168,48 @@ const Confirmed = (props) => {
 
                 </>
 
+        
+
             }
-            <Card style={{ 
-                width: '100%', 
+            { www && <>
+                <div className='background'>
+                        <div className='box'>
+                            <div className='headers'>
+                                <span onClick={(e) => setWww(false)}>X</span>
+                            </div>
+                <div className='d-flex flex-column justify-content-center align-items-center'>
+                                    <h6 className='my-3 text-bold'>Do not Proceed</h6>
+
+                                    <h6 className='my-0 text-bold'>Wrong Blood Packet has Arrived!!</h6>
+                                    <img src={wrong} height={90} width={90} alt='ok img' className='my-5' />
+                                    {/* <label id='msgPatient'>Message from Patient</label> */}
+                                    {/* <input type='text' id='msgPatient' className='w-75 my-3 rounded' onChange={(e) => setMsgFromPatient(e.target.value)} /> */}
+                                    <button
+                                        className='btn btn-success px-5 py-2'
+                                        style={{fontWeight:'1000', fontSize:'20px'}}
+                                        onClick={()=>{
+                                            setWww(false)
+                                        }}
+                                    >OK</button>
+                                </div>
+
+                        </div>
+                    </div>
+                {/* <div className='msg-box'>
+                                        <p>Sorry Couldn't process!!</p>
+                                        <img src={wrong} height={50} width={50} alt='ok img' />
+                                        <p></p>
+                                        <button
+                                            className='btn btn-primary'
+                                            onClick={handleReadData}
+                                        >READ DATA</button>
+                                    </div> */}
+                                    </>
+               }
+            <Card 
+            style={{ 
                 margin: "0px 0px 0px 0px",
+                width: '100%', 
                 height:'700px'
                  }}>
                 <Card.Body>

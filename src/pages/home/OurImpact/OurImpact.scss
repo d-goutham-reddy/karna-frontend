@@ -1,8 +1,13 @@
 
 .our-impact-card{
     // border: '1px solid black';
-    min-height: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 0;
+    // padding: 0 !important;
  
 }
 

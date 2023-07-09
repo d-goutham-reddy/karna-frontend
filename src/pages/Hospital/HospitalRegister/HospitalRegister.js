@@ -84,38 +84,74 @@ export const HospitalRegister = ()=> {
             <h3 onClick={()=>{
                 navigate('/home')
             }}
-            style={{cursor:'pointer'}}
+            style={{
+                color:'#fe452d92',
+                fontWeight:'1000',
+                fontSize:'35px',
+                cursor:'pointer',
+            }}
             >HOSPITAL DETAILS</h3>
-            <Form className='border  w-lg-75 w-sm-100 rounded p-3 w-75'>
+            <Form className='w-lg-75 w-sm-100 rounded p-3 w-75'>
 
-                <Form.Group className="mb-3" controlId="name">
-                    <Form.Label>Name</Form.Label>
+                <Form.Group className="mb-3 addShow " controlId="name">
+                    <Form.Label
+                         style={{
+                            color:'#fe452d92',
+                            fontWeight:'1000',
+                        }}
+                    >Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter you name" name='name' onChange={handleonChange}/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="phone">
-                    <Form.Label>PHONE No.</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="phone">
+                    <Form.Label
+                         style={{
+                            color:'#fe452d92',
+                            fontWeight:'1000',
+                        }}
+                    >PHONE No.</Form.Label>
                     <Form.Control type="number" placeholder="PH NO." name='phone' onChange={handleonChange}/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="email">
-                    <Form.Label>EMAIL ID</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="email">
+                    <Form.Label
+                         style={{
+                            color:'#fe452d92',
+                            fontWeight:'1000',
+                        }}
+                    >EMAIL ID</Form.Label>
                     <Form.Control type="email" placeholder="Email" name='email' onChange={handleonChange}/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="password">
-                    <Form.Label>password</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="password">
+                    <Form.Label
+                         style={{
+                            color:'#fe452d92',
+                            fontWeight:'1000',
+                        }}
+                    >password</Form.Label>
                     <Form.Control type="password" placeholder="password" name='password' onChange={handleonChange}/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="address">
-                    <Form.Label>address</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="address">
+                    <Form.Label
+                         style={{
+                            color:'#fe452d92',
+                            fontWeight:'1000',
+                        }}
+                    >address</Form.Label>
                     <Form.Control as="textarea" type="text" placeholder="address" rows={3} name='address' onChange={handleonChange}/>
                 </Form.Group>
 
 
-                <Form.Group className="mb-3" controlId="hospitalregnum">
-                    <Form.Label>HOSPITAL REG No :</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="hospitalregnum">
+                    <Form.Label
+                    
+                    style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}
+                    >HOSPITAL REG No :</Form.Label>
                     <Form.Control as="textarea" type="text" placeholder="HOSPITAL REG No :" rows={2} name='hospitalregnum' onChange={handleonChange}/>
                 </Form.Group>
 

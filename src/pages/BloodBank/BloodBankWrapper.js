@@ -9,8 +9,8 @@ const BloodBAnkWrapper = ()=> {
     return (
         <Fragment>
             {
-                location.pathname !== '/bloodBank/login' && <BloodBankTopBar/>
-                // location.pathname === '/bloodbank/register') ? <BloodBankTopBar/>:''
+                // location.pathname !== '/bloodBank/login' && <BloodBankTopBar/>
+                location.pathname === '/bloodbank/register' || location.pathname === '/bloodbank/login' ? <></>:<BloodBankTopBar/>
             }
             <Outlet/>
             

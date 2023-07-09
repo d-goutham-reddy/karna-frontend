@@ -69,36 +69,76 @@ export const BloodBankRegister = () => {
     return (
         <Fragment>
             <div className={classes['dis-det']}>
-                <h3>BLOOD BANK REGISTRATION</h3>
+                <h3
+                    style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                        fontSize:'35px'
+                    }}
+                ><span onClick={()=>{
+                    navigate('/')
+                }}
+                style={{cursor:'pointer'}}
+                >BLOOD BANK REGISTRATION</span></h3>
                 <ToastContainer/>
-                <Form className='border  w-lg-75 w-sm-100 rounded p-3 w-75'>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
+                <Form className='w-lg-75 w-sm-100 rounded p-3 w-75'>
+                    <Form.Group className="mb-3 addShow" controlId="formBasicEmail">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter you name" onChange={(e) => setName(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="">
-                        <Form.Label>Blood Bank register No.</Form.Label>
+                    <Form.Group className="mb-3 addShow" controlId="">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >Blood Bank register No.</Form.Label>
                         <Form.Control type="text" placeholder="register No" onChange={(e) => setbldbnk(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="">
-                        <Form.Label>PHONE No.</Form.Label>
+                    <Form.Group className="mb-3 addShow" controlId="">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >PHONE No.</Form.Label>
                         <Form.Control type="number" placeholder="PH NO." onChange={(e) => setPh(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="">
-                        <Form.Label>EMAIL ID</Form.Label>
+                    <Form.Group className="mb-3 addShow" controlId="">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >EMAIL ID</Form.Label>
                         <Form.Control type="email" placeholder="Email" onChange={(e) => setEm(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="">
-                        <Form.Label>password</Form.Label>
+                    <Form.Group className="mb-3 addShow" controlId="">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >password</Form.Label>
                         <Form.Control type="password" placeholder="password" onChange={(e) => setPsw(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="">
-                        <Form.Label>address</Form.Label>
+                    <Form.Group className="mb-3 addShow" controlId="">
+                        <Form.Label
+                             style={{
+                                color:'#fe452d92',
+                                fontWeight:'1000',
+                            }}
+                        >address</Form.Label>
                         <Form.Control as="textarea" type="text" placeholder="address" rows={3} onChange={(e) => setAddr(e.target.value)} />
                     </Form.Group>
 

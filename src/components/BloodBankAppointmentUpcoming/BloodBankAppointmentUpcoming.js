@@ -47,7 +47,8 @@ const BloodBankAppointmentUpcoming = (props) => {
         async function callApi() {
             try {
                 await axios
-                    .put(`${baseURL}/bloodbank/appointments/upcoming/cancel/${props?.id}`)
+                    .put(`${baseURL}/bloodbank/appointments/upcoming/cancel/${props?.id}`,
+                    {'cancelReason':cancelReason})
                     .then((response) => {
                         console.log(response.status)
                         if (response.status === 200) {

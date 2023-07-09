@@ -29,8 +29,7 @@ const  Delivered = (props)=> {
     <Card style={{
        width: '100%',
         margin:"0px 0px 0px 0px",
-        width: '100%', 
-        height:'700px' }}>
+      }}>
     <Card.Body>
       <Card.Text><span>BLOOD BANK NAME:</span> {props.bbName}</Card.Text>
       <Card.Text><span>BLOOD BANK LOCATION:</span>{props.bbLoc}</Card.Text>

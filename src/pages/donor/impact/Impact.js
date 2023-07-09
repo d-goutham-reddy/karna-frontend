@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import badge from "../../../assests/hh.jpg"
-import TestMonial from "../../../components/Testimonial/TestMonial";
+import TestMonial from "./TestMonial";
 import women from "../../../assests/woman.png"
 import Form from 'react-bootstrap/Form';
 import { toast } from 'react-toastify';
@@ -140,8 +140,10 @@ const Impact = () => {
                     <Col xs={12} md={6} lg={4}>
 
                         <Card style={{ width: '100%', height: '100%' }} className='text-center'>
-                            <Card.Body className='d-flex justify-content-center align-items-center flex-column'>
-                                <Card.Title>LIVES SAVED METER</Card.Title>
+                            <Card.Body className='our-impact-card d-flex justify-content-center align-items-center flex-column'>
+                                <Card.Title
+                                style={{ color: '#FE472D', fontSize:'25px'}}
+                                >LIVES SAVED METER</Card.Title>
                                 <Card.Title></Card.Title>
                                 <Card.Title></Card.Title>
                                 <Card.Title></Card.Title>
@@ -153,8 +155,10 @@ const Impact = () => {
                     </Col>
                     <Col xs={12} md={6} lg={4}>
                         <Card style={{ width: '100%' }} className='text-center'>
-                            <Card.Body>
-                                <Card.Title>BADGE</Card.Title>
+                            <Card.Body className='our-impact-card d-flex justify-content-center align-items-center flex-column'>
+                                <Card.Title
+                                style={{ color: '#FE472D', fontSize:'25px'}}
+                                >BADGE</Card.Title>
                                 <Card.Img src={badge} style={{
                                     width: '150px',
                                     height: '100px',
@@ -168,7 +172,9 @@ const Impact = () => {
                     <Col xs={12} md={6} lg={4} >
                         <Card style={{ width: '100%', height: '100%' }} className='text-center'>
                             <Card.Body className='d-flex justify-content-center align-items-center flex-column'>
-                                <Card.Title>{'LEADERSHIP BOARD'}</Card.Title>
+                                <Card.Title
+                                style={{ color: '#FE472D', fontSize:'25px'}}
+                                >{'LEADERSHIP BOARD'}</Card.Title>
                                 <Card.Title>{''}</Card.Title>
                                 <Card.Title>{''}</Card.Title>
                                 <Card.Title>{`Points - ${localStorage.getItem('donor_points')}`}</Card.Title>
@@ -179,12 +185,14 @@ const Impact = () => {
                     </Col>
                 </Row>
                 <br></br>
-                    <h3 className='my-5 border-bottom '>WORDS FROM LIVES YOU SAVED :</h3>
-                <Row>
+                    <h3 className='my-5 border-bottom '
+                    style={{ color: '#FE472D', fontSize:'30px'}}
+                    >WORDS FROM LIVES YOU SAVED</h3>
+                <Row className='gx-5 gy-5'>
                     {
                         msgs.map((ele, index) => {
                             return (
-                                <Col key={index} xs={12} className='mx-2 my-1'>
+                                <Col key={index} xs={12} md={6} lg={4} className=''>
                                     <TestMonial
                                         ima={women}
                                         feed={ele.heartwarmingmsg}
@@ -231,7 +239,9 @@ const Impact = () => {
             </Container>
 
             <div className='mx-5'>
-                <h2 className='my-5 border-bottom '>VOLUNTEERING IMPORTANCE :</h2>
+                <h2 className='my-5 border-bottom '
+                style={{ color: '#FE472D', fontSize:'30px'}}
+                >VOLUNTEERING IMPORTANCE :</h2>
                 <p>
                     Sign yourself to be a volunteer.<br />
                     Donate blood when it is most needed.<br />
@@ -242,7 +252,9 @@ const Impact = () => {
             </div>
 
             <Form.Group className="mb-3 mx-5 border border-dark p-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>FEEDBACK ABOUT YOUR EXPERIENCE IN THE WEBSITE AND IT’S IMPACT ON DONATION MINDSET</Form.Label>
+                <Form.Label
+                style={{ color: '#FE472D', fontSize:'18px'}}
+                >FEEDBACK ABOUT YOUR EXPERIENCE IN THE WEBSITE AND IT’S IMPACT ON DONATION MINDSET</Form.Label>
                 <Form.Control
                     as="textarea"
                     rows={3}

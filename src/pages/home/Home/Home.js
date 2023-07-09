@@ -19,6 +19,11 @@ import hand from "../../../assests/hand.png";
 import classes from "./Home.module.css";
 
 const Home = (props) => {
+
+
+  
+
+
   return (
     <Fragment>
       <div className={classes["outer-cont"]}>
@@ -127,7 +132,7 @@ const Home = (props) => {
 
                 <p
                   className="w-100 px-3 py-2"
-                  style={{ fontSize: "20px", wordSpacing: "0px" }}
+                  style={{ fontSize: "15px", wordSpacing: "0px" }}
                 >
                   {" "}
                   Despite advances in medical science, there is no substitute
@@ -149,7 +154,7 @@ const Home = (props) => {
 
                 <p
                   className="w-100 px-3 py-2"
-                  style={{ fontSize: "20px", wordSpacing: "0px" }}
+                  style={{ fontSize: "15px", wordSpacing: "0px" }}
                 >
                   {" "}
                   Blood donation is a safe and easy process that can be
@@ -173,7 +178,7 @@ const Home = (props) => {
                 <div className="d-flex justify-content-center align-items-center flex-column  ">
                   <p
                     className="w-100 px-3 py-2"
-                    style={{ fontSize: "20px", wordSpacing: "0px" }}
+                    style={{ fontSize: "15px", wordSpacing: "0px" }}
                   >
                     {" "}
                     Blood donation is a community responsibility. It is a way
@@ -198,7 +203,7 @@ const Home = (props) => {
                 <div className="d-flex justify-content-center align-items-center flex-column  ">
                   <p
                     className="w-100 px-3 py-2"
-                    style={{ fontSize: "20px", wordSpacing: "0px" }}
+                    style={{ fontSize: "15px", wordSpacing: "0px" }}
                   >
                     {" "}
                     Donating blood can have health benefits for the donor, such
@@ -221,7 +226,7 @@ const Home = (props) => {
                 <div className="d-flex justify-content-center align-items-center flex-column  ">
                   <p
                     className="w-100 px-3 py-2"
-                    style={{ fontSize: "20px", wordSpacing: "0px" }}
+                    style={{ fontSize: "15px", wordSpacing: "0px" }}
                   >
                     {" "}
                     Blood donation is cost-effective compared to the cost of
@@ -248,7 +253,7 @@ const Home = (props) => {
                 <div className="d-flex justify-content-center align-items-center flex-column  ">
                   <p
                     className="w-100 px-3 py-2"
-                    style={{ fontSize: "20px", wordSpacing: "0px" }}
+                    style={{ fontSize: "15px", wordSpacing: "0px" }}
                   >
                     {" "}
                     For families of donors, organ donation can be a way to honor
@@ -272,7 +277,7 @@ const Home = (props) => {
                 <div className="d-flex justify-content-center align-items-center flex-column  ">
                   <p
                     className="w-100 px-3 py-2"
-                    style={{ fontSize: "20px", wordSpacing: "0px" }}
+                    style={{ fontSize: "15px", wordSpacing: "0px" }}
                   >
                     {" "}
                     In addition to transplantation, donated organs can also be

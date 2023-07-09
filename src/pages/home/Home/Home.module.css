@@ -12,7 +12,7 @@
 .outer-cont h3{
     text-align: center;
     font-weight: 1000;
-    font-size: 25px;
+    font-size: 20px;
     color: #FE472D;
 }
 
@@ -89,7 +89,7 @@
 .dis-det h3{
     text-align: left;
     font-weight: 1000;
-    font-size: 50px;
+    font-size: 30px;
     width: 93%;
     color: #FE472D;
     margin: 25px 0px;
@@ -100,14 +100,14 @@
 
 .dis-det p{
     text-align: left;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 35px;
     word-spacing: 5px;
 }
 
 .dis-det p span{
     font-weight: 1000;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 70px;
     color: #FE472D;
     border-radius: 10px;

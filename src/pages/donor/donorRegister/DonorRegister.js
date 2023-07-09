@@ -138,57 +138,89 @@ const DonorRegister = () => {
             }}
             style={{cursor:'pointer'}}
             >DONOR REGISTER</h3>
-            <Form className='border  w-lg-75 w-sm-100 rounded p-3' >
-                <Form.Group className="mb-3" onChange={handleFormData}  controlId="fname" >
-                    <Form.Label >First name</Form.Label>
+            <Form className='w-lg-75 w-sm-100 rounded p-3' >
+                <Form.Group className="mb-3 addShow " onChange={handleFormData}  controlId="fname" >
+                    <Form.Label
+                     style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}
+                    >First name</Form.Label>
                     <Form.Control type="text" placeholder="Enter you name" name='fname' />
                 </Form.Group>
 
-                <Form.Group className="mb-3"  onChange={handleFormData} controlId='mname'>
-                    <Form.Label>Middle name</Form.Label>
+                <Form.Group className="mb-3 addShow"  onChange={handleFormData} controlId='mname'>
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }} >Middle name</Form.Label>
                     <Form.Control type="text" placeholder="middle name" name='mname'/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="lname" onChange={handleFormData} >
-                    <Form.Label>Last name</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="lname" onChange={handleFormData} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Last name</Form.Label>
                     <Form.Control type="text" placeholder="last name" name='lname' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="DOB" onChange={handleFormData}  >
-                    <Form.Label>Date of birth</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="DOB" onChange={handleFormData}  >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Date of birth</Form.Label>
                     <Form.Control type="date" placeholder="Date of birth" name='DOB' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="phone" onChange={handleFormData} >
-                    <Form.Label>Phone</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="phone" onChange={handleFormData} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Phone</Form.Label>
                     <Form.Control type="number" placeholder="Phone" name='phone' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="age" onChange={handleFormData}>
-                    <Form.Label>Age</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="age" onChange={handleFormData}>
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Age</Form.Label>
                     <Form.Control type="number" placeholder="Age" name='age' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="email" onChange={handleFormData} >
-                    <Form.Label>Email</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="email" onChange={handleFormData} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Email</Form.Label>
                     <Form.Control type="email" placeholder="email" name='email' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="password" onChange={handleFormData} >
-                    <Form.Label>Password</Form.Label>
+                <Form.Group className="mb-3 addShow" controlId="password" onChange={handleFormData} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Password</Form.Label>
                     <Form.Control type="password" placeholder="password" name='password' />
                 </Form.Group>
 
 
-                <Form.Group className="mb-3" onChange={handleFormData} controlId="address">
-                    <Form.Label>Address</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData} controlId="address">
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Address</Form.Label>
                     <Form.Control as="textarea" type="textarea" placeholder="address" name='address' />
                 </Form.Group>
 
-                <Form.Group className="mb-3" onChange={handleFormData}  name='sex' >
-                    <Form.Label>sex</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData}  name='sex' >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>sex</Form.Label>
                     {/* {['radio'].map((type) => (*/}
-                    <div className="mb-3" >
+                    <div className="mb-3 addShow" >
                         <Form.Check
                             label="male"
                             name="sex"
@@ -208,10 +240,13 @@ const DonorRegister = () => {
 
                 </Form.Group>
 
-                <Form.Group className="mb-3" onChange={handleFormData}  name='bloodgroup'>
-                    <Form.Label>Blood group</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData}  name='bloodgroup'>
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Blood group</Form.Label>
 
-                    <div className="mb-3">
+                    <div className="mb-3 addShow">
                         <Form.Check
                             inline
                             label="A+"
@@ -284,16 +319,25 @@ const DonorRegister = () => {
 
 
                 </Form.Group>
-                <Form.Group className="mb-3" onChange={handleFormData} controlId="aadharId" name={'aadharId'} >
-                    <Form.Label>Aadhar ID</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData} controlId="aadharId" name={'aadharId'} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Aadhar ID</Form.Label>
                     <Form.Control  placeholder="AADHAR ID" name={'aadharId'} type="number" />
                 </Form.Group>
-                <Form.Group className="mb-3" onChange={handleFormData} controlId="emergencycontactname" name={'emergencycontactname'} >
-                    <Form.Label>Emergency contact name</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData} controlId="emergencycontactname" name={'emergencycontactname'} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Emergency contact name</Form.Label>
                     <Form.Control type="text" placeholder="Emergency contact name" name={'emergencycontactname'} />
                 </Form.Group>
-                <Form.Group className="mb-3" onChange={handleFormData} controlId="emergencycontactphone" name={'emergencycontactphone'} >
-                    <Form.Label>Emergency contact phone</Form.Label>
+                <Form.Group className="mb-3 addShow" onChange={handleFormData} controlId="emergencycontactphone" name={'emergencycontactphone'} >
+                    <Form.Label      style={{
+                        color:'#fe452d92',
+                        fontWeight:'1000',
+                    }}>Emergency contact phone</Form.Label>
                     <Form.Control type="number" placeholder="Emergency contact phone" name={'emergencycontactphone'} />
                 </Form.Group>
 

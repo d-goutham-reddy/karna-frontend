@@ -92,7 +92,7 @@ const NewBloodDonate = () => {
                 <div className='my-4'>
                     <h5 style={{ fontWeight: "bolder" }}>Location</h5>
                     <DropdownButton
-
+                        className='addShow bg-light'
                         id="dropdown-basic-button"
                         title={`Choose The Location Where You Wish To Donate  `}
                         drop={'bottom'}>
@@ -100,7 +100,9 @@ const NewBloodDonate = () => {
                             {
                                 bloodDonationLocation.map((ele, index) => {
                                     return (
-                                        <Dropdown.Item key={index} onClick={(e) => {
+                                        <Dropdown.Item 
+                                        className='addShow bg-light'
+                                        key={index} onClick={(e) => {
                                             setSelectedLocation(ele._id)
                                         }}>{ele.name}</Dropdown.Item>
                                     )
@@ -108,17 +110,21 @@ const NewBloodDonate = () => {
                             }
                         </div>
                     </DropdownButton>
-                    <Form.Group className="mb-3 my-4" controlId="DOB" onChange={(e)=> setDattt(e.target.value)}  >
+                    <Form.Group className="mb-3 my-4 addShow" controlId="DOB" onChange={(e)=> setDattt(e.target.value)}  >
                         <Form.Label>Date</Form.Label>
                         <Form.Control type="date" placeholder="Date of birth" name='DOB' />
                     </Form.Group>
-                    <Form.Group className="mb-3 my-4" controlId="DOB" onChange={(e)=> setTimeee(e.target.value)}  >
+                    <Form.Group className="mb-3 my-4 addShow" controlId="DOB" onChange={(e)=> setTimeee(e.target.value)}  >
                         <Form.Label>Date Time</Form.Label>
                         <Form.Control type="time" placeholder="Date of birth" name='DOB' />
                     </Form.Group>
                 </div>
-                <h4 className='my-4 mt-2'>You’re Not Eligible To Donate Permanently If:</h4>
-                <p className='my-4 mt-2'>1. You have HIV or AIDS history or tested positive for syphilis, gonorrhea, or other sexually transmitted infections.<br></br>
+                <h4 className='my-4 mt-2'
+                     style={{ color: '#FE472D', fontSize:'25px'}}
+                >You’re Not Eligible To Donate Permanently If</h4>
+                <p className='my-4 mt-2'
+                
+                >1. You have HIV or AIDS history or tested positive for syphilis, gonorrhea, or other sexually transmitted infections.<br></br>
                     2. You used needles to take drugs, including steroids.<br></br>
                     3. You ever had hepatitis B or C or have an active hepatitis infection.<br></br>
                     4. You ever had cancer, including leukemia and lymphoma.<br></br>
@@ -128,7 +134,9 @@ const NewBloodDonate = () => {
                     8. You don’t satisfy the age limit criterion  Minimum 18 Years and Maximum 65 Years.<br></br>
                     9. You don’t satisfy the weight limit criterion  Minimum 50 kgs.</p>
 
-                <h4 className='my-4 mt-2'>You’re Not Eligible To Donate Blood Temporarily For A Certain Period Of Time If:</h4>
+                <h4 className='my-4 mt-2'
+                     style={{ color: '#FE472D', fontSize:'25px'}}
+                >You’re Not Eligible To Donate Blood Temporarily For A Certain Period Of Time If</h4>
                 <p className='my-4 mt-2'>
                     1. You have diabetes and took insulin or other medications 24 hours prior to the time of donation and have complications such as retinopathy, neuropathy or nephropathy.<br></br>
                     2. You have Hypertension and have headache, dizziness or chest pain related to high Blood Pressure at the time of donation.<br></br>
@@ -148,6 +156,7 @@ const NewBloodDonate = () => {
                     style={{ cursor: 'pointer' }}
                     type='checkbox'
                     id='checkbox'
+                    className='addShow mx-3 w-100 d-flex justify-content-center mx-3 px-3'
                     label='I Hereby Confirm That I Have Read All the Eligibilty Criterion And That I Am Eligible To The Best Of My Knowledge'
 
                 />

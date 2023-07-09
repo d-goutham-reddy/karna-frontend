@@ -75,7 +75,7 @@ export const Terms = () => {
                           toast.success(`Succesfully verfied `, {
                               toastId: 'blood bank register'
                           })
-                          navigate('hospital/stock')
+                          navigate('bloodbank/stock')
                       }
                       else {
                           toast.error(`unable to verify`, {
@@ -108,7 +108,7 @@ export const Terms = () => {
                       toast.success(`Succesfully verfied `, {
                           toastId: 'blood bank register'
                       })
-                      navigate('/hospital/stock')
+                      navigate('/bloodbank/stock')
                   }
                   else {
                       toast.error(`unable to verify`, {

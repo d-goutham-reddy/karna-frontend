@@ -21,6 +21,7 @@ const OurImpact = () => {
     const [lifeSaved, setLifeSaved] = useState();
     const [organ, setOrgan] = useState();
     const [bloodPacket, setBloodPacket] = useState();
+    const [test, setTest] = useState([]);
 
     // api call functions
     async function getLiveSaved() {
@@ -88,6 +89,32 @@ const OurImpact = () => {
         getOrganDonated()
     }, [])
 
+    useEffect(()=>{
+
+        async function getTestimonials() {
+            try {
+                await axios
+                    .get(`${baseURL}/home/experiences`)
+                    .then((response) => {
+                        console.log(response.status)
+                        if (response.status === 200) {
+                            setTest(response?.data)
+                        }
+                        else {
+                            console.log("response")
+                        }
+                    })
+            }
+            catch (e) {
+                console.log(e);
+               
+            }
+        }
+        getTestimonials();
+    }, [])
+
+    console.log(test)
+
     return (
         <Fragment>
             <div className={classes['dis-det']}>
@@ -95,7 +122,9 @@ const OurImpact = () => {
                 <div className='row w-100 px-5 gx-5 gy-5'>
                     <div className='col-12 col-lg-4 '>
                         <Card >
-                            <Card.Body className='our-impact-card'>
+                            <Card.Body
+                             className='our-impact-card'
+                             >
                                 <Card.Title className=''>
                                     <h3 className='w-100 m-0 text-center text-dark'>LIVES SAVED</h3>
                                 </Card.Title>
@@ -133,16 +162,27 @@ const OurImpact = () => {
             </div>
             <div className={classes['dis-det']}>
                 <h3>EXPERIENCES </h3>
-                <div className='row my-2 w-100 gx-5 gy-5'>
-                <TestMonial
+                <div className='row my-2 w-100 gx-5 gy-5 h-100'>
+
+                {
+                    test.map((ele, index)=>{
+                       
+                       return <TestMonial
+                        key={index}
+                        ima={women}
+                        feed={ele.feedback}
+                        name="NAME" />
+                    })
+                }
+                {/* <TestMonial
                     ima={women}
                     feed="This platform
                 has helped my mom who needed 
                 blood immediately after a deadly
                 accident, thank you for your service."
-                    name="NAME" />
+                    name="NAME" /> */}
      
-                <TestMonial
+                {/* <TestMonial
                     ima={women}
                     feed="“This platform
                 has helped my mom who needed 
@@ -156,7 +196,7 @@ const OurImpact = () => {
                 has helped my mom who needed 
                 blood immediately after a deadly
                 accident, thank you for your service."
-                    name="NAME" />
+                    name="NAME" /> */}
             </div>
             </div>
         </Fragment>

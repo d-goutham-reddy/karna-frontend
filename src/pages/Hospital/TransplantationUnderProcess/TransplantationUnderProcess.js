@@ -170,6 +170,7 @@ const TransplantationUnderProcess = () => {
     }
     callApi();
   }
+  const [empty, setEmpty] = useState(false);
 
   useEffect(() => {
     async function callBloodApi() {
@@ -186,16 +187,20 @@ const TransplantationUnderProcess = () => {
               setLon(Number(response.data[0].long));
               setLan(Number(response.data[0].lat));
               setSp(Number(response.data[0].speed));
+              setEmpty(true)
               // Transplantation under progress 176
               // setLon(response?.data[0].lon);
               // setLan(response?.data[0].lat);
               // setSp(response?.data[0].sp);
 
             } else {
+        setEmpty(false)
+
               console.log("response");
             }
           });
       } catch (e) {
+        setEmpty(false)
         console.log(e);
       }
     }
@@ -227,15 +232,17 @@ const TransplantationUnderProcess = () => {
               }}>
                 Donor Details
               </h4>
+
               {/* {kidneyTransplant.map((ele) => {
             return ( */}
               <>
-                <p>
+                {
+                  empty ? <>           <p>
                   <span style={{
                     color: '#fe452d92',
                     fontWeight: '1000'
                   }}>{`Name:  `}</span>
-                  {kidneyTransplant[0].name}
+                  {kidneyTransplant[0]?.name}
                 </p>
                 <p>
                   <span style={{
@@ -244,15 +251,21 @@ const TransplantationUnderProcess = () => {
                   }}>
                     {`Blood Group: `}{" "}
                   </span>
-                  {kidneyTransplant[0].bloodgroup}
+                  {kidneyTransplant[0]?.bloodgroup}
                 </p>
                 <p>
                   <span style={{
                     color: '#fe452d92',
                     fontWeight: '1000'
                   }}>{`Phone No: `}</span>
-                  {kidneyTransplant[0].phone}
-                </p>
+                  {kidneyTransplant[0]?.phone}
+                </p></>:<><p >No DATA<span style={{
+                    color: '#fe452d92',
+                    fontWeight: '1000'
+                  }}>{`:(`}</span>
+                   </p></>
+                }
+     
               </>
               {/* );
           })} */}
@@ -272,20 +285,27 @@ const TransplantationUnderProcess = () => {
               {/* {kidneyTransplant.map((ele) => {
             return (*/}
               <>
-                <p>
-                  <span style={{
-                    color: '#fe452d92',
-                    fontWeight: '1000'
-                  }}>{`Name: `}</span>
-                  {kidneyTransplant[0].fromHospital.name}
-                </p>
-                <p>
-                  <span style={{
-                    color: '#fe452d92',
-                    fontWeight: '1000'
-                  }}>{`Address: `}</span>
-                  {kidneyTransplant[0].fromHospital.address}
-                </p>
+              {
+                empty ? <><p>
+                <span style={{
+                  color: '#fe452d92',
+                  fontWeight: '1000'
+                }}>{`Name: `}</span>
+                {kidneyTransplant[0]?.fromHospital.name}
+              </p>
+              <p>
+                <span style={{
+                  color: '#fe452d92',
+                  fontWeight: '1000'
+                }}>{`Address: `}</span>
+                {kidneyTransplant[0]?.fromHospital.address}
+              </p></>:<><p >No DATA<span style={{
+                  color: '#fe452d92',
+                  fontWeight: '1000'
+                }}>{`:(`}</span>
+                 </p></>
+              }
+                
               </>
               {/* );
           })} */}
@@ -304,21 +324,29 @@ const TransplantationUnderProcess = () => {
 
               {/* {kidneyTransplant.map((ele) => {
             return ( */}
+
+            {
+              empty? <><p>
+              <span style={{
+                color: '#fe452d92',
+                fontWeight: '1000'
+              }}>{`Name: `}</span>
+              {kidneyTransplant[0]?.toHospital.name}
+            </p>
+            <p>
+              <span style={{
+                color: '#fe452d92',
+                fontWeight: '1000'
+              }}>{`Address: `}</span>
+              {kidneyTransplant[0]?.toHospital?.address}
+            </p></>:<><p >No DATA<span style={{
+                color: '#fe452d92',
+                fontWeight: '1000'
+              }}>{`:(`}</span>
+               </p></>
+            }
               <>
-                <p>
-                  <span style={{
-                    color: '#fe452d92',
-                    fontWeight: '1000'
-                  }}>{`Name: `}</span>
-                  {kidneyTransplant[0].toHospital.name}
-                </p>
-                <p>
-                  <span style={{
-                    color: '#fe452d92',
-                    fontWeight: '1000'
-                  }}>{`Address: `}</span>
-                  {kidneyTransplant[0]?.toHospital?.address}
-                </p>
+                
               </>
               {/* //   );
           // })} */}
@@ -336,6 +364,8 @@ const TransplantationUnderProcess = () => {
       <div className="my-3 mx-5 px-5">
         <MapContainer
           center={[lon, lat]}
+          // center={['85.506525', '89.965645']}
+
           zoom={12}
           scrollWheelZoom={true}
           style={{ height: '40vh', width: "100%", }}>

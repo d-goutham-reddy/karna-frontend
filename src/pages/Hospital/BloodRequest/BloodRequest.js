@@ -82,7 +82,7 @@ const BloodRequest = () =>{
                             toast.success("Succesfully blood request created :)", {
                                 toastId: 'blood request success'
                             })
-                            // setTimeout(navigate('/donor/login'), 8000);
+                            setTimeout(navigate('/hospital/request'), 8000);
                         }
                         else {
                             toast.error("Something went wrong :(", {

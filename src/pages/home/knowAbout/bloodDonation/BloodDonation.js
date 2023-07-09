@@ -16,7 +16,7 @@ const BloodDonation = () => {
               to injury, illness, or surgery. Here are some 
               key things to know about blood donation:
         </p>
-        <h3>Types of organ donation:</h3>
+        {/* <h3>Types of organ donation:</h3> */}
         <p>
           <span>Who can donate blood ?</span>  <br />
           Anyone who is in good health, is at least 17 years old (in most countries),
@@ -42,7 +42,7 @@ const BloodDonation = () => {
 
 
       <div className={classes['dis-det']}>
-        <h3>Process of organ donation</h3>
+        {/* <h3>Process of organ donation</h3> */}
         <p>
           <span>What happens during a blood donation?</span> <br />
           During a blood donation, a healthcare professional

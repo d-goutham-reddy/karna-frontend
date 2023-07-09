@@ -1,0 +1,16 @@
+.our-impact-card{
+    // border: '1px solid black';
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0;
+    // padding: 0 !important;
+ 
+}
+
+.our-impact-card h3{
+    font-size: 35px;
+    word-wrap: break-word;
+}

@@ -389,7 +389,7 @@ const rfidGet = ()=>{
                                         BldGrp={ele.bloodDonationDetails.bloodgroup}
                                         PltCnt={ele.bloodDonationDetails.plateletCount}
                                         HmLvl={ele.bloodDonationDetails.haemoglobinLevel}
-                                        Rbc={ele.bloodDonationDetails.haemoglobinLevel}
+                                        Rbc={ele.bloodDonationDetails.rbcCount}
                                         Rp={ele.bloodDonationDetails.report}
                                     />
                                     </Col>)
@@ -411,7 +411,7 @@ const rfidGet = ()=>{
                                         BldGrp={ele.bloodDonationDetails.bloodgroup}
                                         PltCnt={ele.bloodDonationDetails.plateletCount}
                                         HmLvl={ele.bloodDonationDetails.haemoglobinLevel}
-                                        Rbc={ele.bloodDonationDetails.haemoglobinLevel}
+                                        Rbc={ele.bloodDonationDetails.rbcCount}
                                         Rp={ele.bloodDonationDetails.report}
                                     />
                                     </Col>)
@@ -432,7 +432,7 @@ const rfidGet = ()=>{
                                         BldGrp={ele.bloodDonationDetails.bloodgroup}
                                         PltCnt={ele.bloodDonationDetails.plateletCount}
                                         HmLvl={ele.bloodDonationDetails.haemoglobinLevel}
-                                        Rbc={ele.bloodDonationDetails.haemoglobinLevel}
+                                        Rbc={ele.bloodDonationDetails.rbcCount}
                                         Rp={ele.bloodDonationDetails.report}
                                     />
                                     </Col>)
@@ -453,7 +453,7 @@ const rfidGet = ()=>{
                                         BldGrp={ele.bloodDonationDetails.bloodgroup}
                                         PltCnt={ele.bloodDonationDetails.plateletCount}
                                         HmLvl={ele.bloodDonationDetails.haemoglobinLevel}
-                                        Rbc={ele.bloodDonationDetails.haemoglobinLevel}
+                                        Rbc={ele.bloodDonationDetails.rbcCount}
                                         Rp={ele.bloodDonationDetails.report}
                                     />
                                     </Col>)

@@ -32,7 +32,7 @@ const StockBLd = (props)=> {
       <Card.Text>EXPIRY DATE : {props.ExpDate}</Card.Text>
       <Card.Text>BLOOD GROUP : {props.BldGrp}</Card.Text>
       <Card.Text>PLATELET COUNT : {props.PltCnt}</Card.Text>
-      <Card.Text>HAEMOGLOBIN LEVEL : No. {props.HmLvl}</Card.Text>
+      <Card.Text>HAEMOGLOBIN LEVEL :{props.HmLvl}</Card.Text>
       <Card.Text>RED BLOOD CELL COUNT : {props.Rbc}</Card.Text>
       <Card.Text>REPORT : {props.Rp}</Card.Text>
       {

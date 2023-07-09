@@ -422,18 +422,23 @@ export const CompleteForm = (props) => {
             showInsertCard && <div className='card_insert'>
                 <div className='box'>
                     <div className='header'>
-                    <h4>Details About to be Written into the RFID TAG ARE:</h4>
+                    
                     <span onClick={handleCloseX}>X</span>
                     </div>
-                    <div className='img-dis'>
-                    <img src={correct} alt='correct ico' height={60} width={60}/>
+                    <div className='img-dis mx-5 my-5'>
+                    {/* <img src={correct} alt='correct ico' height={60} width={60}/> */}
                     {
-                      showOk ? <>
-                    <button className='btn btn-success rounded' onClick={()=>{
+                      showOk ? <div className='d-flex flex-column justify-content-center align-items-center'>
+                    <h4 className='text-center my-5'>Details inserted Successfully</h4>
+
+                      <img src={correct} alt='correct ico' height={60} width={60}/> 
+                    <button className='btn btn-success rounded mt-5 px-5 py-1' onClick={()=>{
                         window.location.reload(false);
                     }}>Ok</button>
                       
-                      </> : <> <p>Name: {rfidDataInsert.donorDetails.fname}</p>
+                      </div> : <> 
+                    <h4 className='text-center my-5'>Details About to be Written into the RFID TAG ARE</h4>
+                      <p>Name: {rfidDataInsert.donorDetails.fname}</p>
                       <p>Phone: {rfidDataInsert.donorDetails.phone}</p>
                       <p>Blood group: {rfidDataInsert.donorDetails.bloodgroup}</p>
                       <p>Sex: {rfidDataInsert.donorDetails.sex}</p>

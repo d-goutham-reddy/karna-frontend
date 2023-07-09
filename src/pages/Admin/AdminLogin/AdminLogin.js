@@ -15,6 +15,7 @@ const AdminLogin = (props) => {
     const navigate = useNavigate();
 
 
+
     const handleLogin = (e)=>{
 
         e.preventDefault();
@@ -72,7 +73,11 @@ const AdminLogin = (props) => {
                 <div className={`col-lg ${classes['left-container']}`}>
                     <div className={` ${classes['form-cont']}`}>
                         <div className={`my-3 ${classes['form-heading']}`}>
-                            KARNA
+                           <span 
+                           onClick={()=>{
+                            navigate('/')
+                           }}
+                           style={{cursor: 'pointer'}}>KARNA</span> 
                         </div>
 
                         <form className={`d-flex flex-column ${classes['form-sty']}`}>

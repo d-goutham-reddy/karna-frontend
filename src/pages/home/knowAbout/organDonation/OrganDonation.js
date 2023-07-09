@@ -1,5 +1,11 @@
 import React, { Fragment } from 'react'
 import classes from "./OrganDonation.module.css";
+import regis from "../../../../assests/register.png"
+import competence from "../../../../assests/competence.png"
+import consent from "../../../../assests/donor-consent-form.png"
+import recovery from "../../../../assests/recovery.png"
+import heart from "../../../../assests/heart.png"
+
 
 const OrganDonation = () => {
     return (
@@ -31,19 +37,69 @@ const OrganDonation = () => {
             </div>
             <div className={classes['dis-det']}>
                 <h3>Process of organ donation</h3>
-                <p>
 
-                <span>Registering :</span> People can register to become organ donors by signing up online or through their state's Department of Motor Vehicles.
+            <div className="container">
+            <div className="row w-100 gy-5">
+
+
+                <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src={regis} alt="register" width={90} height={90}/>
+                <p className='text-center'>
+                <span>Registering</span></p>
+                <p className='text-center'>People can register to become organ donors by signing up online or through their state's Department of Motor Vehicles.
                 </p>
-                <p>
-                <span>Determination of eligibility :</span> After someone passes away, medical professionals will evaluate the organs to determine if they are suitable for donation.
+                </div>
+
+
+                <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src={competence} alt="register" width={90} height={90}/>
+                <p className='text-center'>
+                <span>Determination of eligibility</span></p>
+                <p className='text-center'>After someone passes away, medical professionals will evaluate the organs to determine if they are suitable for donation.
+                </p>
+                </div>
+
+
+                <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src={consent} alt="register" width={90} height={90}/>
+                <p className='text-center'>
+                <span>Consent</span></p>
+                <p className='text-center'>The donor's family will be asked for consent before any organs are removed.
+                </p>
+                </div>
+
+
+                <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src={recovery} alt="register" width={90} height={90}/>
+                <p className='text-center'>
+                <span>Recovery</span></p>
+                <p className='text-center'>After consent is given, organs are removed from the donor's body in a surgical procedure.
+                </p>
+                </div>
+
+
+                <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src={heart} alt="register" width={90} height={90}/>
+                <p className='text-center'>
+                <span>Transplantation</span></p>
+                <p className='text-center'> The recovered organs are then transported to the recipient, who will undergo a surgical procedure to receive the donated organ.
+                </p>
+                </div>
+
+
+            </div>  
+            </div>
+         
+               
+                {/* <p>
+                <span>Determination of eligibility</span> After someone passes away, medical professionals will evaluate the organs to determine if they are suitable for donation.
                 </p><p>
                 <span>Consent :</span> The donor's family will be asked for consent before any organs are removed.
                 </p><p>
                <span> Recovery :</span> After consent is given, organs are removed from the donor's body in a surgical procedure.
                 </p> <p>
                 <span>Transplantation :</span> The recovered organs are then transported to the recipient, who will undergo a surgical procedure to receive the donated organ.
-                </p>
+                </p> */}
             </div>
             <div className={classes['dis-det']}>
                 <h3>What organs can I donate after I die?</h3>
