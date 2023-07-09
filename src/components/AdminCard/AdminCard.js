@@ -105,7 +105,7 @@ const AdminCard = (props)=> {
       <Card.Text>
         ADDRESS : {`${(props.addr).slice(0, 20)} ...`}</Card.Text>
       <Card.Text>
-        HOSPITAL REG No : {`${(props.hosreg).slice(0, 20)} ...`}</Card.Text>
+        REG No : {`${(props.hosreg).slice(0, 20)} ...`}</Card.Text>
       <Card.Text>
         <Form className='d-flex'>
       <Button variant="success" className='mx-2 my-2' onClick={handleVerify}>VERIFY</Button><br/>
