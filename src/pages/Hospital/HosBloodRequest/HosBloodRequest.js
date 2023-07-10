@@ -456,7 +456,7 @@ const HosBloodRequest = () => {
                                             bbLoc = {ele.bloodDonationDetails.location}
                                             bbNumber = {ele.bloodDonationDetails.bloodbankDetails.phone}
                                             comp = {ele.bloodRequestDetails.component}
-                                            bloodGroup = {ele.bloodRequestDetails.bloodGroup}
+                                            bloodGroup = {ele.bloodDonationDetails.bloodGroup}
                                             expiryDate = {ele.expiryDate}
                                             plateletCount = {ele.bloodDonationDetails.plateletCount}
                                             haemoglobinLvl = {ele.bloodDonationDetails.haemoglobinLevel}
