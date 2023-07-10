@@ -262,7 +262,7 @@ export const Requests = () => {
         async function callApi() {
             try {
                 await axios
-                    .get(`${baseURL}/bloodbank/requests/delivered/${localStorage.getItem('blood_bank_id')}`)
+                    .get(`${baseURL}/bloodbank/requests/confirmed/${localStorage.getItem('blood_bank_id')}`)
                     .then((response) => {
                         console.log(response.status)
                         if (response.status === 200) {
