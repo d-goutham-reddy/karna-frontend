@@ -453,7 +453,7 @@ const HosBloodRequest = () => {
                                     <Col lg={6} md={12} xs={12} className='my-4' key={index}>
                                         <Delivered
                                             bbName = {ele.bloodDonationDetails.bloodbankDetails.name}
-                                            bbLoc = {ele.bloodDonationDetails.location}
+                                            bbLoc = {ele.bloodDonationDetails.bloodbankDetails.address}
                                             bbNumber = {ele.bloodDonationDetails.bloodbankDetails.phone}
                                             comp = {ele.bloodRequestDetails.component}
                                             bloodGroup = {ele.bloodDonationDetails.bloodgroup}
